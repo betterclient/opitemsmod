@@ -118,8 +118,8 @@ public class OpItems implements ModInitializer {
 		
 		ItemStack stackedtotem = new ItemStack(Items.TOTEM_OF_UNDYING);
 		stackedtotem.setCount(64);
-		stacks.add(stackedtotem);
 		stackedtotem.setCustomName(new TranslatableText("Stacked Totem"));
+		stacks.add(stackedtotem);
 		
 		stacks.add(new ItemStack(Blocks.COMMAND_BLOCK));
 		stacks.add(new ItemStack(Blocks.BARRIER));
