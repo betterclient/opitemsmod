@@ -6,7 +6,6 @@ import java.util.List;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
-import org.quiltmc.qsl.item.group.api.QuiltItemGroup.Builder;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantment;
@@ -15,12 +14,14 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
 public class OpItems implements ModInitializer {
+	QuiltItemGroup opGroup;
+	
 	@Override
 	public void onInitialize(ModContainer mod) {
-		Builder builder = QuiltItemGroup.builder(new Identifier("opitems", "optab"));
-		builder.appendItems(t -> getItems());
-		builder.icon(() -> new ItemStack(Blocks.BARRIER));
-		builder.build();
+		opGroup = QuiltItemGroup.builder(new Identifier("opitems", "optab"))
+				.appendItems(t -> getItems())
+				.icon(() -> new ItemStack(Blocks.BARRIER))
+				.build();
 	}
 	
 	public List<ItemStack> getItems(){
