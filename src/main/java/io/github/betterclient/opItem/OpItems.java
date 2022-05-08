@@ -19,7 +19,9 @@ public class OpItems implements ModInitializer {
 	@Override
 	public void onInitialize(ModContainer mod) {
 		opGroup = QuiltItemGroup.builder(new Identifier("opitems", "optab"))
-				.appendItems(t -> getItems())
+				.appendItems(t -> {
+					t.addAll(getItems());
+				})
 				.icon(() -> new ItemStack(Blocks.BARRIER))
 				.build();
 	}
