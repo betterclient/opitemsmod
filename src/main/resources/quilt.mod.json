@@ -2,7 +2,7 @@
 	"schema_version": 1,
 	"quilt_loader": {
 		"group": "io.github.betterclient",
-		"id": "opItems",
+		"id": "opitems",
 		"version": "${version}",
 		"metadata": {
 			"name": "Op Items",
