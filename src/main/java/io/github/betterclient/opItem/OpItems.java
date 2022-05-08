@@ -6,9 +6,8 @@ import java.util.List;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
-
 import net.minecraft.block.Blocks;
-import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
@@ -27,84 +26,84 @@ public class OpItems implements ModInitializer {
 	}
 	
 	public List<ItemStack> getItems(){
-		List<ItemStack> stacks = new ArrayList<>();
+				List<ItemStack> stacks = new ArrayList<>();
 		
 		ItemStack sharp32ksword = new ItemStack(Items.NETHERITE_SWORD);
-		sharp32ksword.addEnchantment(Enchantment.byRawId(16), 255);//Sharpness
-		sharp32ksword.addEnchantment(Enchantment.byRawId(20), 255);//Fire aspect
-		sharp32ksword.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		sharp32ksword.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		sharp32ksword.addEnchantment(Enchantments.SHARPNESS, 255);
+		sharp32ksword.addEnchantment(Enchantments.FIRE_ASPECT, 255);
+		sharp32ksword.addEnchantment(Enchantments.MENDING, 255);
+		sharp32ksword.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(sharp32ksword);
 		
 		ItemStack sharp32kaxe = new ItemStack(Items.NETHERITE_AXE);
-		sharp32kaxe.addEnchantment(Enchantment.byRawId(32), 255);//Efficiency
-		sharp32kaxe.addEnchantment(Enchantment.byRawId(16), 255);//Sharpness
-		sharp32kaxe.addEnchantment(Enchantment.byRawId(20), 255);//Fire aspect
-		sharp32kaxe.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		sharp32kaxe.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		sharp32kaxe.addEnchantment(Enchantments.EFFICIENCY, 255);
+		sharp32kaxe.addEnchantment(Enchantments.SHARPNESS, 255);
+		sharp32kaxe.addEnchantment(Enchantments.FIRE_ASPECT, 255);
+		sharp32kaxe.addEnchantment(Enchantments.MENDING, 255);
+		sharp32kaxe.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(sharp32kaxe);
 		
 		ItemStack eff32kpickaxe = new ItemStack(Items.NETHERITE_PICKAXE);
-		eff32kpickaxe.addEnchantment(Enchantment.byRawId(32), 255);//Efficiency
-		eff32kpickaxe.addEnchantment(Enchantment.byRawId(35), 10);//Fortune
-		eff32kpickaxe.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		eff32kpickaxe.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		eff32kpickaxe.addEnchantment(Enchantments.EFFICIENCY, 255);
+		eff32kpickaxe.addEnchantment(Enchantments.FORTUNE, 10);
+		eff32kpickaxe.addEnchantment(Enchantments.MENDING, 255);
+		eff32kpickaxe.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(eff32kpickaxe);
 		
 		ItemStack silktouchpickaxe = new ItemStack(Items.NETHERITE_PICKAXE);
-		silktouchpickaxe.addEnchantment(Enchantment.byRawId(32), 255);//Efficiency
-		silktouchpickaxe.addEnchantment(Enchantment.byRawId(33), 1);//Silk Touch
-		silktouchpickaxe.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		silktouchpickaxe.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		silktouchpickaxe.addEnchantment(Enchantments.EFFICIENCY, 255);
+		silktouchpickaxe.addEnchantment(Enchantments.SILK_TOUCH, 1);
+		silktouchpickaxe.addEnchantment(Enchantments.MENDING, 255);
+		silktouchpickaxe.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(silktouchpickaxe);
 		
 		ItemStack eff32kshovel = new ItemStack(Items.NETHERITE_SHOVEL);
-		eff32kshovel.addEnchantment(Enchantment.byRawId(32), 255);//Efficiency
-		eff32kshovel.addEnchantment(Enchantment.byRawId(35), 10);//Fortune
-		eff32kshovel.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		eff32kshovel.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		eff32kshovel.addEnchantment(Enchantments.EFFICIENCY, 255);
+		eff32kshovel.addEnchantment(Enchantments.FORTUNE, 10);
+		eff32kshovel.addEnchantment(Enchantments.MENDING, 255);
+		eff32kshovel.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(eff32kshovel);
 		
 		ItemStack all32khelmet = new ItemStack(Items.NETHERITE_HELMET);
-		all32khelmet.addEnchantment(Enchantment.byRawId(0), 255);//Protection
-		all32khelmet.addEnchantment(Enchantment.byRawId(1), 255);//Fire Protection
-		all32khelmet.addEnchantment(Enchantment.byRawId(3), 255);//Blast Protection
-		all32khelmet.addEnchantment(Enchantment.byRawId(4), 255);//Projectile Protection
-		all32khelmet.addEnchantment(Enchantment.byRawId(5), 255);//Respiration
-		all32khelmet.addEnchantment(Enchantment.byRawId(7), 255);//Thorns
-		all32khelmet.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		all32khelmet.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		all32khelmet.addEnchantment(Enchantments.PROTECTION, 255);
+		all32khelmet.addEnchantment(Enchantments.FIRE_PROTECTION, 255);
+		all32khelmet.addEnchantment(Enchantments.BLAST_PROTECTION, 255);
+		all32khelmet.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 255);
+		all32khelmet.addEnchantment(Enchantments.RESPIRATION, 255);
+		all32khelmet.addEnchantment(Enchantments.THORNS, 255);
+		all32khelmet.addEnchantment(Enchantments.MENDING, 255);
+		all32khelmet.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(all32khelmet);
 		
 		ItemStack all32kchestplate = new ItemStack(Items.NETHERITE_CHESTPLATE);
-		all32kchestplate.addEnchantment(Enchantment.byRawId(0), 255);//Protection
-		all32kchestplate.addEnchantment(Enchantment.byRawId(1), 255);//Fire Protection
-		all32kchestplate.addEnchantment(Enchantment.byRawId(3), 255);//Blast Protection
-		all32kchestplate.addEnchantment(Enchantment.byRawId(4), 255);//Projectile Protection
-		all32kchestplate.addEnchantment(Enchantment.byRawId(7), 255);//Thorns
-		all32kchestplate.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		all32kchestplate.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		all32kchestplate.addEnchantment(Enchantments.PROTECTION, 255);
+		all32kchestplate.addEnchantment(Enchantments.FIRE_PROTECTION, 255);
+		all32kchestplate.addEnchantment(Enchantments.BLAST_PROTECTION, 255);
+		all32kchestplate.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 255);
+		all32kchestplate.addEnchantment(Enchantments.THORNS, 255);
+		all32kchestplate.addEnchantment(Enchantments.MENDING, 255);
+		all32kchestplate.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(all32kchestplate);
 		
 		ItemStack all32kleggings = new ItemStack(Items.NETHERITE_LEGGINGS);
-		all32kleggings.addEnchantment(Enchantment.byRawId(0), 255);//Protection
-		all32kleggings.addEnchantment(Enchantment.byRawId(1), 255);//Fire Protection
-		all32kleggings.addEnchantment(Enchantment.byRawId(3), 255);//Blast Protection
-		all32kleggings.addEnchantment(Enchantment.byRawId(4), 255);//Projectile Protection
-		all32kleggings.addEnchantment(Enchantment.byRawId(7), 255);//Thorns
-		all32kleggings.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		all32kleggings.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		all32kleggings.addEnchantment(Enchantments.PROTECTION, 255);
+		all32kleggings.addEnchantment(Enchantments.FIRE_PROTECTION, 255);
+		all32kleggings.addEnchantment(Enchantments.BLAST_PROTECTION, 255);
+		all32kleggings.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 255);
+		all32kleggings.addEnchantment(Enchantments.THORNS, 255);
+		all32kleggings.addEnchantment(Enchantments.MENDING, 255);
+		all32kleggings.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(all32kleggings);
 		
 		ItemStack all32kboots = new ItemStack(Items.NETHERITE_BOOTS);
-		all32kboots.addEnchantment(Enchantment.byRawId(0), 255);//Protection
-		all32kboots.addEnchantment(Enchantment.byRawId(1), 255);//Fire Protection
-		all32kboots.addEnchantment(Enchantment.byRawId(3), 255);//Blast Protection
-		all32kboots.addEnchantment(Enchantment.byRawId(4), 255);//Projectile Protection
-		all32kboots.addEnchantment(Enchantment.byRawId(7), 255);//Thorns
-		all32kboots.addEnchantment(Enchantment.byRawId(2), 255);//Feather falling
-		all32kboots.addEnchantment(Enchantment.byRawId(70), 255);//Mending
-		all32kboots.addEnchantment(Enchantment.byRawId(34), 255);//Unbreaking
+		all32kboots.addEnchantment(Enchantments.PROTECTION, 255);
+		all32kboots.addEnchantment(Enchantments.FIRE_PROTECTION, 255);
+		all32kboots.addEnchantment(Enchantments.BLAST_PROTECTION, 255);
+		all32kboots.addEnchantment(Enchantments.PROJECTILE_PROTECTION, 255);
+		all32kboots.addEnchantment(Enchantments.THORNS, 255);
+		all32kboots.addEnchantment(Enchantments.FEATHER_FALLING, 255);
+		all32kboots.addEnchantment(Enchantments.MENDING, 255);
+		all32kboots.addEnchantment(Enchantments.UNBREAKING, 255);
 		stacks.add(all32kboots);
 		
 		stacks.add(new ItemStack(Blocks.COMMAND_BLOCK));
