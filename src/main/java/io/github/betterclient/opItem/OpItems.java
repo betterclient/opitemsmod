@@ -1,4 +1,4 @@
-package io.betterclient.opItem;
+package io.github.betterclient.opItem;
 
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
