@@ -13,12 +13,12 @@
 			"contact": {
 				"homepage": "https://github.com/BetterClient/opitemsmod",
 				"issues": "https://github.com/BetterClient/opitemsmod/issues",
-                                "sources": "https://github.com/BetterClient/opitemsmod" 
+        "sources": "https://github.com/BetterClient/opitemsmod" 
 			}
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.betterclient.opItems.OpItems"
+			"init": "io.github.betterclient.opItem.OpItems"
 		},
 		"depends": [
 			{
