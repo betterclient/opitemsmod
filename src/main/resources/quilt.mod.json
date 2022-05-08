@@ -14,7 +14,8 @@
 				"homepage": "https://www.curseforge.com/minecraft/mc-mods/op-tab",
 				"issues": "https://github.com/BetterClient/opitemsmod/issues",
         "sources": "https://github.com/BetterClient/opitemsmod" 
-			}
+			},
+			"icon": "assets/opitems/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
