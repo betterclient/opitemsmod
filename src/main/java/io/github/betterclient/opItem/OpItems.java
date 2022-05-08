@@ -1,5 +1,8 @@
 package io.github.betterclient.opItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
@@ -10,7 +13,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.collection.DefaultedList;
 
 public class OpItems implements ModInitializer {
 	@Override
@@ -21,8 +23,8 @@ public class OpItems implements ModInitializer {
 		builder.build();
 	}
 	
-	public DefaultedList<ItemStack> getItems(){
-		DefaultedList<ItemStack> stacks = DefaultedList.of();
+	public List<ItemStack> getItems(){
+		List<ItemStack> stacks = new ArrayList<>();
 		
 		ItemStack sharp32ksword = new ItemStack(Items.NETHERITE_SWORD);
 		sharp32ksword.addEnchantment(Enchantment.byRawId(16), 32767);//Sharpness
