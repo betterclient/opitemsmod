@@ -8,10 +8,13 @@ import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
+
 
 public class OpItems implements ModInitializer {
 	QuiltItemGroup opGroup;
@@ -121,6 +124,17 @@ public class OpItems implements ModInitializer {
 		stackedtotem.setCustomName(new TranslatableText("Stacked Totem"));
 		stacks.add(stackedtotem);
 		
+		SpawnEggItem armorstandspawnegg = SpawnEggItem.forEntity(EntityType.ARMOR_STAND);
+		ItemStack armorstandSpawnegg = new ItemStack(armorstandspawnegg);
+		armorstandSpawnegg.setCustomName(new TranslatableText("Armor Stand Spawn Egg"));
+		stacks.add(armorstandSpawnegg);
+		
+		SpawnEggItem itemframespawnegg = SpawnEggItem.forEntity(EntityType.ITEM_FRAME);
+		ItemStack itemframeSpawnegg = new ItemStack(itemframespawnegg);
+		itemframeSpawnegg.setCustomName(new TranslatableText("Item Frame Spawn Egg"));
+		stacks.add(itemframeSpawnegg);
+		
+			
 		stacks.add(new ItemStack(Blocks.COMMAND_BLOCK));
 		stacks.add(new ItemStack(Blocks.BARRIER));
 		stacks.add(new ItemStack(Blocks.STRUCTURE_BLOCK));
