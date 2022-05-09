@@ -125,18 +125,6 @@ public class OpItems implements ModInitializer {
 		stackedtotem.setCount(64);
 		stackedtotem.setCustomName(new TranslatableText("Stacked Totem"));
 		stacks.add(stackedtotem);
-		
-		SpawnEggItem armorstandspawnegg = new SpawnEggItem((EntityType<? extends MobEntity>) EntityType.ARMOR_STAND.create(MinecraftClient.getInstance().world).getType(), -1, -1, new Item.Settings());;
-		ItemStack armorstandSpawnegg = new ItemStack(armorstandspawnegg);
-		armorstandSpawnegg.setCustomName(new TranslatableText("Armor Stand Spawn Egg"));
-		stacks.add(armorstandSpawnegg);
-		
-		SpawnEggItem itemframespawnegg = new SpawnEggItem((EntityType<? extends MobEntity>) EntityType.ITEM_FRAME.create(MinecraftClient.getInstance().world).getType(), -1, -1, new Item.Settings());
-		ItemStack itemframeSpawnegg = new ItemStack(itemframespawnegg);
-		itemframeSpawnegg.setCustomName(new TranslatableText("Item Frame Spawn Egg"));
-		stacks.add(itemframeSpawnegg);
-		
-		
 			
 		stacks.add(new ItemStack(Blocks.COMMAND_BLOCK));
 		stacks.add(new ItemStack(Blocks.BARRIER));
