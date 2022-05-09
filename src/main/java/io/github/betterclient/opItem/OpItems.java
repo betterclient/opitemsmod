@@ -7,14 +7,16 @@ import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
-
 
 public class OpItems implements ModInitializer {
 	QuiltItemGroup opGroup;
@@ -124,15 +126,16 @@ public class OpItems implements ModInitializer {
 		stackedtotem.setCustomName(new TranslatableText("Stacked Totem"));
 		stacks.add(stackedtotem);
 		
-		SpawnEggItem armorstandspawnegg = SpawnEggItem.forEntity(EntityType.ARMOR_STAND);
+		SpawnEggItem armorstandspawnegg = new SpawnEggItem((EntityType<? extends MobEntity>) EntityType.ARMOR_STAND.create(MinecraftClient.getInstance().world).getType(), -1, -1, new Item.Settings());;
 		ItemStack armorstandSpawnegg = new ItemStack(armorstandspawnegg);
 		armorstandSpawnegg.setCustomName(new TranslatableText("Armor Stand Spawn Egg"));
 		stacks.add(armorstandSpawnegg);
 		
-		SpawnEggItem itemframespawnegg = SpawnEggItem.forEntity(EntityType.ITEM_FRAME);
+		SpawnEggItem itemframespawnegg = new SpawnEggItem((EntityType<? extends MobEntity>) EntityType.ITEM_FRAME.create(MinecraftClient.getInstance().world).getType(), -1, -1, new Item.Settings());
 		ItemStack itemframeSpawnegg = new ItemStack(itemframespawnegg);
 		itemframeSpawnegg.setCustomName(new TranslatableText("Item Frame Spawn Egg"));
 		stacks.add(itemframeSpawnegg);
+		
 		
 			
 		stacks.add(new ItemStack(Blocks.COMMAND_BLOCK));
