@@ -2,24 +2,25 @@
 	"schema_version": 1,
 	"quilt_loader": {
 		"group": "io.github.betterclient",
-		"id": "opitems",
+		"id": "optab",
 		"version": "${version}",
 		"metadata": {
-			"name": "Op Items",
+			"name": "Op Tab",
 			"description": "Adds /give items as a creative tab.",
 			"contributors": {
 				"BetterClient": "Owner"
 			},
 			"contact": {
-				"homepage": "https://www.curseforge.com/minecraft/mc-mods/op-tab",
+				"curseforge": "https://www.curseforge.com/minecraft/mc-mods/op-tab",
+				"modrinth": "https://modrinth.com/mod/optab",
 				"issues": "https://github.com/BetterClient/opitemsmod/issues",
         "sources": "https://github.com/BetterClient/opitemsmod" 
 			},
-			"icon": "assets/opitems/icon.png"
+			"icon": "assets/optab/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.betterclient.opItem.OpItems"
+			"init": "io.github.betterclient.optab.OpItems"
 		},
 		"depends": [
 			{
@@ -36,5 +37,5 @@
 			}
 		]
 	},
-	"mixin": "opitems.mixins.json"
+	"mixin": "optab.mixins.json"
 }
