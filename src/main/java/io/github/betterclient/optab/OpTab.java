@@ -18,7 +18,7 @@ import net.minecraft.item.SpawnEggItem;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 
-public class OpItems implements ModInitializer {
+public class OpTab implements ModInitializer {
 	QuiltItemGroup opGroup;
 	
 	@Override
