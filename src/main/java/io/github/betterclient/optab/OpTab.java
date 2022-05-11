@@ -23,7 +23,7 @@ public class OpItems implements ModInitializer {
 	
 	@Override
 	public void onInitialize(ModContainer mod) {
-		opGroup = QuiltItemGroup.builder(new Identifier("opitems", "optab"))
+		opGroup = QuiltItemGroup.builder(new Identifier("optab", "optab"))
 				.appendItems(t -> {
 					t.addAll(getItems());
 				})
