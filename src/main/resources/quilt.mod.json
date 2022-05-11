@@ -20,7 +20,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.betterclient.optab.OpItems"
+			"init": "io.github.betterclient.optab.OpTab"
 		},
 		"depends": [
 			{
