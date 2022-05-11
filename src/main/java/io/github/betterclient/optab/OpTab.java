@@ -1,4 +1,4 @@
-package io.github.betterclient.opItem;
+package io.github.betterclient.optab;
 
 import java.util.ArrayList;
 import java.util.List;
