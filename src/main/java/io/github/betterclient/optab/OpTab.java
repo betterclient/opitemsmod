@@ -3,10 +3,11 @@ package io.github.betterclient.optab;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup; //QSL no longer has ItemGroup in it so fabric
+import net.minecraft.item.ItemGroup;
 import net.minecraft.text.Text;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
-import org.quiltmc.qsl.item.group.api.QuiltItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
@@ -14,17 +15,21 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
 public class OpTab implements ModInitializer {
-	QuiltItemGroup opGroup;
+	public ItemGroup opGroup;
 
 	@Override
 	public void onInitialize(ModContainer mod) {
-		opGroup = QuiltItemGroup.builder(new Identifier("optab", "optab"))
-				.appendItems(t -> t.addAll(getItems()))
-				.icon(() -> new ItemStack(Blocks.BARRIER))
-				.build();
+		var builder = FabricItemGroup.builder(new Identifier("optab", "optab"));
+		var items = this.getItems();
+		var icon = new ItemStack(Blocks.BARRIER);
+
+		builder.icon(() -> icon);
+		builder.entries((featureFlagBitSet, itemStackCollector, bl) -> itemStackCollector.addStacks(items));
+
+		opGroup = builder.build();
 	}
 
-		public List<ItemStack> getItems(){
+	public List<ItemStack> getItems(){
 		List<ItemStack> stacks = new ArrayList<>();
 
 		ItemStack sharp32ksword = new ItemStack(Items.NETHERITE_SWORD);
@@ -114,10 +119,12 @@ public class OpTab implements ModInitializer {
 		all32kboots.setCustomName(Text.translatable("OP Boots"));
 		stacks.add(all32kboots);
 
-		ItemStack stackedtotem = new ItemStack(Items.TOTEM_OF_UNDYING);
+		/*ItemStack stackedtotem = new ItemStack(Items.TOTEM_OF_UNDYING);
 		stackedtotem.setCount(64);
 		stackedtotem.setCustomName(Text.translatable("Stacked Totem"));
 		stacks.add(stackedtotem);
+		 */
+		//Unfortunately 1.19.3 doesn't seem to allow stacked items in item groups
 
 		stacks.add(new ItemStack(Blocks.COMMAND_BLOCK));
 		stacks.add(new ItemStack(Blocks.BARRIER));
