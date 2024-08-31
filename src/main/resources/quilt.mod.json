@@ -14,7 +14,7 @@
 				"curseforge": "https://www.curseforge.com/minecraft/mc-mods/op-tab",
 				"modrinth": "https://modrinth.com/mod/optab",
 				"issues": "https://github.com/BetterClient/opitemsmod/issues",
-        "sources": "https://github.com/BetterClient/opitemsmod" 
+        "sources": "https://github.com/BetterClient/opitemsmod"
 			},
 			"icon": "assets/optab/icon.png"
 		},
@@ -29,9 +29,8 @@
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.19"
+				"versions": ">=1.21"
 			}
 		]
-	},
-	"mixin": "optab.mixins.json"
+	}
 }
